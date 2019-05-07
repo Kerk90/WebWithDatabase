@@ -5,45 +5,44 @@
  */
 package com.mycompany.models;
 
-import java.time.LocalDate;
 
 /**
  *
  * @author user
  */
 public class User {
-    private String name;
-    private String password;
-    private LocalDate birthDate;
+    private Integer id;
+    private String fistName;
+    private String lastName;
 
-    public User(String name, String password, LocalDate birthDate) {
-        this.name = name;
-        this.password = password;
-        this.birthDate = birthDate;
+    public User(Integer id, String fistName, String lastName) {
+        this.id = id;
+        this.fistName = fistName;
+        this.lastName = lastName;
     }
 
-    public String getName() {
-        return name;
+    public Integer getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getPassword() {
-        return password;
+    public String getFistName() {
+        return fistName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setFistName(String fistName) {
+        this.fistName = fistName;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     
     

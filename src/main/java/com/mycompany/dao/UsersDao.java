@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.repositories;
+package com.mycompany.dao;
 
 import com.mycompany.models.User;
 import java.util.List;
@@ -12,8 +12,6 @@ import java.util.List;
  *
  * @author user
  */
-public interface UsersRepository {
-    List<User> findAll();
-    void save(User user);
-    boolean isExist(String name, String password);
+public interface UsersDao extends CrudDao<User>{
+    List<User> findAllByFirstName(String firstName);
 }
