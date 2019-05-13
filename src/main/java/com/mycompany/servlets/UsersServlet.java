@@ -49,8 +49,7 @@ public class UsersServlet extends HttpServlet {
         
         try {
             PreparedStatement preparedStatement = 
-                    connection.prepareStatement("INSERT INTO" + 
-                            "fix_user(first_name, last_name) VALUES (?, ?)");
+                    connection.prepareStatement("INSERT INTO fix_user(first_name, last_name) VALUES (?, ?)");
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
             preparedStatement.execute();
