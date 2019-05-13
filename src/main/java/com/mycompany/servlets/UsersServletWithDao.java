@@ -8,6 +8,7 @@ package com.mycompany.servlets;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.mycompany.dao.UsersDao;
 import com.mycompany.dao.UsersDaoJdbcImpl;
+import com.mycompany.dao.UsersDaoJdbcTemplateImpl;
 //import com.mycompany.dao.UsersDaoJdbcTemplateImpl;
 import com.mycompany.models.User;
 
@@ -49,8 +50,8 @@ public class UsersServletWithDao extends HttpServlet {
             dataSource.setUrl(dbUrl);
             dataSource.setDriverClassName(driverClassName);
             
-            usersDao = new UsersDaoJdbcImpl(dataSource);
-            // usersDao = new UsersDaoJdbcTemplateImpl(dataSource);
+            //usersDao = new UsersDaoJdbcImpl(dataSource);
+             usersDao = new UsersDaoJdbcTemplateImpl(dataSource);
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         } 

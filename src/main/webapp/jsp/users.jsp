@@ -24,7 +24,7 @@
                 </tr>
                 <c:forEach items="${usersFromServer}" var="user">
                     <tr>
-                        <td>${user.firstName}</td>
+                        <td>${user.fistName}</td>
                     </tr>
                 </c:forEach>
             </table>
